@@ -20,7 +20,16 @@ interface Offers {
     occupants: string;
 }
 
+export interface Review {
+    id: number;
+    name: string;
+    avatar: string;
+    rating: number;
+    comment: string;
+}
+
 export interface PropertyProps {
+    id: number;
     name: string;
     address: Address;
     rating: number;
@@ -29,12 +38,16 @@ export interface PropertyProps {
     offers: Offers;
     image: string;
     discount: string;
+    reviews: Review[];
+    description: string; // Add this field
 }
+
 export interface PillProps {
     label: string;
     isSelected: boolean;
     onClick: () => void;
 }
+
 export interface CardProps {
     image: string;
     name: string;
